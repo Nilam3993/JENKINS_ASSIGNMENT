@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script {
                     def app = docker.build("nilamballal169/dev:latest")
-                    docker.withRegistry('https://registry.hub.docker.com', 'docker-cred') {
+                    docker.withRegistry('https://registry.hub.docker.com', 'docker_cred') {
                         app.push()
                     }
                 }
